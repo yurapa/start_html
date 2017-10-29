@@ -1,0 +1,70 @@
+/* Table of Contents:
+==================================================
+  #FONT
+  #Foundation - v.6.3.1
+  #Motion UI - v.1.2.2
+  #Slick - v.1.6.0
+  #TYPOGRAPHY
+  #FORM
+  #HEADER:
+    .header-top
+    .header-middle
+    .header-bottom
+    .header-slider
+  #CONTENT
+  #FOOTER
+    .footer-info
+    .footer-menu
+    .footer-logo
+*/
+
+
+// Import Bootstrap Components
+@import "../../../bower_components/bootstrap/scss/bootstrap-reboot";
+@import "../../../bower_components/bootstrap/scss/grid";
+@import "../../../bower_components/bootstrap/scss/type";
+@import "../../../bower_components/bootstrap/scss/buttons";
+@import "../../../bower_components/bootstrap/scss/forms";
+@import "../../../bower_components/bootstrap/scss/navbar";
+@import "../../../bower_components/bootstrap/scss/images";
+@import "../../../bower_components/bootstrap/scss/transitions";
+@import "../../../bower_components/bootstrap/scss/utilities";
+
+
+$mobile: 544px;
+$tablet: 768px;
+$desktop: 992px;
+$wide-desktop: 1200px;
+
+// Sass Breakpoint Mixin
+@mixin breakpoint($point) {
+  @if $point == medium {
+    @media (min-width: 30em) { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 50em) { @content; }
+  }
+  @else if $point { // allows custom breakpoints
+    @media (min-width: $point) { @content; }
+  }
+}
+
+
+// Custom styles
+p {
+    line-height: 2em;
+    // background-color: $custom-color;
+    @include breakpoint($mobile) {
+        line-height: 40px;
+    }
+}
+
+
+// Import custom files
+@import "variables";
+@import "fonts";
+@import "typography";
+@import "form";
+@import "header";
+@import "footer";
+@import "util";

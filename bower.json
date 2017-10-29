@@ -1,0 +1,9 @@
+{
+  "name": "Project_Name",
+  "description": "Project_Description",
+  "license": "MIT",
+  "author": "yurapa",
+  "devDependencies": {
+    "bootstrap": "v4.0.0-beta"
+  }
+}
